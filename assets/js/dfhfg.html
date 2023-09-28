@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Weekly Schedule</title>
+  <style>
+    .day {
+      cursor: pointer;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <h1>Weekly Schedule</h1>
+  <p>Click on a day to view its schedule:</p>
+  
+  <p><span class="day" onclick="showSchedule('monday')">Monday</span></p>
+  <p><span class="day" onclick="showSchedule('tuesday')">Tuesday</span></p>
+  <p><span class="day" onclick="showSchedule('wednesday')">Wednesday</span></p>
+  <p><span class="day" onclick="showSchedule('thursday')">Thursday</span></p>
+  <p><span class="day" onclick="showSchedule('friday')">Friday</span></p>
+  <p><span class="day" onclick="showSchedule('saturday')">Saturday</span></p>
+  <p><span class="day" onclick="showSchedule('sunday')">Sunday</span></p>
+  
+
+    <h2 id="scheduleDay"></h2>
+    <ul id="scheduleList"></ul>
+  
+
+  <script>
+    function showSchedule(day) {
+  // Reset schedule list
+  document.getElementById('scheduleList').innerHTML = '';
+
+  // Populate schedule
+  var schedule = getScheduleForDay(day);
+  for (var i = 0; i < schedule.length; i++) {
+    var listItem = document.createElement('li');
+    listItem.innerText = schedule[i];
+    document.getElementById('scheduleList').appendChild(listItem);
+  }
+
+  // Display the schedule container
+  document.getElementById('scheduleContainer').style.display = 'block';
+
+  // Set the schedule day
+  document.getElementById('scheduleDay').innerText = day;
+}
+
+function getScheduleForDay(day) {
+  // Replace this with your own data source or logic to retrieve the schedule for a given day
+  var schedules = {
+    monday: ['10:00AM - 11:30AM','2:00PM - 3:30PM '],
+    tuesday: ['10:00 AM - Project review', '1:00 PM - Lunch break', '3:00 PM - Brainstorming session'],
+    wednesday: ['9:30 AM - Training session', '12:00 PM - Client meeting', '3:30 PM - Task assignment'],
+    thursday: ['10:00 AM - Team meeting', '1:30 PM - Coffee break', '4:00 PM - Project planning'],
+    friday: ['9:00 AM - Weekly report', '11:30 AM - Lunch break', '2:00 PM - Code review'],
+    saturday: ['Day off'],
+    sunday: ['Day off']
+  };
+
+  return schedules[day.toLowerCase()] || [];
+}
+
+  </script>
+</body>
+</html>

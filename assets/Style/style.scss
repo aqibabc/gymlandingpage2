@@ -1,0 +1,241 @@
+@import './color';
+@import '../../node_modules/bootstrap/scss/bootstrap.scss';
+
+
+.ms-6 {
+    margin-left: 14rem !important;
+}
+
+.img-fluid {
+    width: 85%;
+    height: 35vh;
+}
+
+.activate:active {
+    color: $danger !important;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+header {
+    .videoembed {
+        position: absolute;
+        top: 0;
+        right: 0;
+        // bottom: 0;
+        // left: 0;
+        z-index: -1;
+        background-position: center;
+        background-size: cover;
+        height: 100vh;
+    }
+
+    nav {
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        opacity: 0.5;
+        
+        
+        ul {
+            opacity: 2;
+            li {
+
+                a {
+                    transition: all 0.5s !important;
+                }
+
+                a:hover {
+                    color: $danger !important;
+                }
+            }
+        }
+    }
+}
+
+main {
+    flex: 1 0 auto;
+
+    #home {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+
+
+        h1 {
+            font-size: 5.5rem;
+            margin-bottom: 3rem;
+        }
+    }
+
+    #about {
+
+
+        .image {
+            background-color: $danger !important;
+            height: 20vh;
+            width: 20vw;
+            text-align: center;
+
+            img {
+                width: 8vw;
+                height: 15vh;
+                cursor: pointer !important;
+
+            }
+        }
+
+        h5 {
+            cursor: pointer !important;
+
+        }
+
+        p {
+            cursor: pointer !important;
+
+        }
+    }
+
+    #feature {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url("../Images/gym.jpeg");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        min-height: 55vh;
+    }
+
+    #class {
+        .card {
+            cursor: pointer !important;
+
+            p {
+                margin-left: 2rem;
+                margin-top: 1rem;
+
+                i {
+                    font-size: 2rem;
+                    color: $danger;
+                }
+            }
+        }
+
+        h3 {
+            cursor: pointer !important;
+
+        }
+
+        p {
+            cursor: pointer !important;
+
+        }
+
+        img {
+            cursor: pointer !important;
+
+        }
+
+    }
+
+    #sechedules {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url("../Images/five-man.jpeg");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        min-height: 55vh;
+
+
+        .hover {
+
+
+            a {
+                transition: all 0.5s !important;
+            }
+
+            a:hover {
+                color: $danger !important;
+
+
+            }
+        }
+    }
+
+    #tran {
+        .body-card {
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+            .icons {
+                i {
+                    transition: all 0.5s !important;
+
+                }
+
+                i:hover {
+                    color: $danger;
+                }
+            }
+        }
+    }
+
+    #contact {
+        iframe {
+            width: 100% !important;
+            min-height: 62vh;
+        }
+
+        #bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url("../Images/foot.jpeg");
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            min-height: 55vh;
+        }
+
+        .FS-6 {
+            font-size: 12px;
+        }
+    }
+}
+
+@media only screen and (max-width:728px) {
+    main {
+        header{
+            .videoembed{
+            height: 90vh;
+            }
+        }
+        #home {
+            h5 {
+                margin-top: 12rem;
+            }
+
+            h1 {
+                font-size: 4rem;
+                margin-bottom: 3rem;
+            }
+        }
+    }
+
+}
+
+@media only screen and (max-width:425px) {
+    header{
+        .videoembed{
+        height: 90vh;
+        }
+    }
+    main {
+        #home {
+
+            h1 {
+                font-size: 2rem;
+                margin-bottom: 2rem;
+            }
+        }
+    }
+
+}
+
